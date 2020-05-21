@@ -15,6 +15,8 @@ bearer_token=oauthdict.get("access_token")
 # curl https://srinmanfaasblob.blob.core.windows.net/test/helloworldtext -H "x-ms-version: 2017-11-09" -H "Authorization: Bearer 
 cmd="curl https://srinmanfaasblob.blob.core.windows.net/test/helloworldtext -H \"x-ms-version: 2017-11-09\" -H \"Authorization: Bearer "+bearer_token+"\" > blobcontent"
 os.system(cmd)
+cmd="echo \"this is an update\" > updated.txt"
+os.system(cmd)
 PORT = 8000
 
 handler = http.server.SimpleHTTPRequestHandler
